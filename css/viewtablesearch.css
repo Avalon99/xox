@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-color: white;
+}
+.addnew{
+	color: #36FF00;
+}
+.addnew a:link{
+	text-decoration:none;	
+	color:#36FF00;
+}
+.addnew a:hover{
+	color:#36FF00;
+}
+.addnew a:visited{
+	color: #36FF00;
+}
+a:link{
+	text-decoration:none;	
+	color:#000;
+}
+a:visited{
+	color: #000;
+}
+table,td,tr{
+	border-collapse:collapse;
+	padding:8px;	
+}
+table{
+	border:1px #36FF00 solid;
+	width:80%;	
+	background:white;
+	height:auto;
+	margin:auto;
+	box-shadow:3px 3px 9px #000;
+}
+th{
+	background:#000;
+	color:#36FF00;
+	font-weight:bold;
+	padding:5px;
+	/*box-shadow:3px 3px 9px #000;*/
+}
+td{
+	border:1px #000 solid;	
+}
+tr:hover{
+	/*box-shadow: 3px 3px 5px #000;*/
+	background-color:#09F;	
+	color:#36FF00;
+}
+.search{
+	text-align:left;
+	margin-top:-30px;
+	margin-left:910px;
+	position:absolute;
+	width:300px;
+	z-index:1900;	
+}
+
+.logout{
+	text-align:left;
+	margin-top:-20px;
+	margin-left:910px;
+	position:absolute;
+	width:300px;
+	z-index:100;	
+}
+
