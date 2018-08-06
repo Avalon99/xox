@@ -6,6 +6,7 @@ $con=mysqli_connect("localhost", "root", "root","charitydb") or die("Cannot conn
 
 $username=@$_POST["username"];
 $password=@$_POST["password1"];
+$masuk=@$_POST["user_uid"];
 
 $sql="SELECT * FROM user_tbl WHERE username ='$username'";
 $result=mysqli_query($con,$sql);
@@ -20,9 +21,8 @@ if($row["user_pwd"] == $password)
 {
 session_start();
 
-  $_SESSION['username'] = $row['username'];
-  $_SESSION['password'] = $row['user_pwd'];
-  $_SESSION['uid'] = $row['user_uid'];
+  $_SESSION['masuk'] = true;
+  $_SESSION['user_uid'] = $row['user_uid'];
   header('location:user_panel.php');
 }
 else

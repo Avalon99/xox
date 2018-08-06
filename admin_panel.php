@@ -1,5 +1,6 @@
 <?php
 	session_start();
+  $_SESSION["admin_uid"] = '';
 	if($_SESSION["admin_uid"] != 1) {
     echo("<center><h1>Access Denied</h1></center><br/>");
     echo "<center><h1><b>Uh oh looks like you're not loggin as admin</b></center><br/>

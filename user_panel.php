@@ -1,5 +1,6 @@
 <?php
-if(!isset($_SESSION['uid'])){
+$_SESSION['masuk'] = '';
+if($_SESSION['masuk'] != true){
     echo("<center><h1>Access Denied</h1></center><br/>");
     echo "<center><h1><b>Uh oh looks like you're not loggin </b></center><br/>
         <a href='login.php'><center> Login</center></a>";
