@@ -24,13 +24,26 @@ $con = mysqli_connect('localhost', 'root', 'root','charitydb') or die("Cannot co
  $uid=@$_POST['user_uid'];
 $del=@$_GET['del'];
 
-//save datad dri normal user
+$query = "select * from user_tbl where username='$uname' ";
+$result = mysqli_query($con , $query);
+
 if (isset($_POST['reg'])) {
 
 
-    mysqli_query($con, "INSERT INTO user_tbl VALUES(NULL, '$uname', '$password', '$email', '$stud_id', '$f_name', '$l_name')"); 
-    $_SESSION['message'] = "New Account Registered"; 
-    header('location: index.html');
+   if (mysqli_num_rows($result)>0) 
+  {
+    echo "<center><b>Username Already taken</b></center><br<br><br><a href='signup.php'><center><b>Go Back</b></center></a>";
+   die();
+  }
+  else
+  {
+    $insert_sql="INSERT INTO user_tbl VALUES(NULL, '$uname', '$password', '$email', '$stud_id', '$f_name', '$l_name')";
+    mysqli_query($con,$insert_sql) or die("Error in inserting data due to ".mysqli_error());
+  if($insert_sql)
+     header('location:login.php');
+      else
+    echo "Error Registering New Account";
+}
 }
 ?>
   
@@ -46,23 +59,18 @@ if (isset($_POST['reg'])) {
 </div>
 
 
- <script type=text/javascript>
-function message(){
-  alert("Record successfully added!");
-  return true;
-}
-</script>
+
   <div class="login-page">
   <div class="form">
 
-    <form class="login-form" method="POST" action=#>
+    <form name="daa" class="login-form" method="POST" action=#>
       First Name<input type="text" name="fname"/>
       Last Name<input type="text" name="lname"/>
       UserName<input type="text" name="username"/>
       Password<input type="password" name="password1"/>
         Email<input type="text" name="email"/>
         Student_ID<input type="text" name="stud_id"/>
-     <button class="btn" type="submit" name="reg" onclick="return message()" >Register</button>
+     <button class="btn" type="submit" name="reg"  >Register</button>
       <p class="message">registered? <a href="/site/login.php">Login</a></p>
     </form>
   </div>

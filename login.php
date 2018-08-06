@@ -6,15 +6,7 @@
 <link rel="stylesheet" href="/css/style123.css">
 
 
-<script type=text/javascript>
-function checkemp(){
-if ((document.getElementById('username').value == "") || (document.getElementById('password1').value == "")){
-  alert("Pls enter all fields");
-  return false;
-    }
-}
 
-</script>
 </head>
 <body>
   
@@ -29,18 +21,17 @@ if ((document.getElementById('username').value == "") || (document.getElementByI
   <a href="/site/user_panel.php">User Panel</a>
 </div>
 
-
  <div class="login-page">
   <div class="form">
-    <form class="login-form" method="POST" action=login_process.php onsubmit="return checkemp();">
+     <form class="login-form" method="POST" action=login_process.php>
+    <form class="login-form">
       Username<input type="text" name="username"/>
       Password<input type="password" name="password1"/>
-      <button onclick="checkemp()">login</button>
+      <button>login</button>
       <p class="message">Not registered? <a href="/site/signup.php">Create Account</a></p>
     </form>
   </div>
 </div>
-
 
   </body>
 </html>

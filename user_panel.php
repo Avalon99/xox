@@ -1,11 +1,10 @@
 <?php
-  session_start();
-  if($_SESSION["masuk"] != true) {
+if(!isset($_SESSION['uid'])){
     echo("<center><h1>Access Denied</h1></center><br/>");
-    echo "<center><h1><b>Uh oh looks like you're not loggin</b></center><br/>
+    echo "<center><h1><b>Uh oh looks like you're not loggin </b></center><br/>
         <a href='login.php'><center> Login</center></a>";
     exit();
-}
+}  
 ?>
 <!DOCTYPE html>
 <html lang="en">

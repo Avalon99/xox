@@ -13,9 +13,9 @@
   
 <a href="index.html"><img src="images/logo2.png" alt="gmbr logo"></a>
 <div class="topnav">
-  <a class="" href="/site/index.html">Home</a>
-  <a href="/site/index-1.html">About</a>
-  <a  href="index-2.html">Calendar</a>
+  <a class="" href="/site/index.php">Home</a>
+  <a href="/site/about.php">About</a>
+  <a  href="calendar.php">Calendar</a>
   <a class="active" href="/site/login.php">Login</a>
   <a href="/site/signup.php">Signup</a>
   <a class=" href="admin">Admin Panel</a>
